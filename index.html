@@ -1,0 +1,534 @@
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="fontawesome-free-6.2.1-web\css"> <script src="https://kit.fontawesome.com/4f5a8afbc7.js" crossorigin="anonymous"></script>
+    <style>
+        .review p{
+gap: 0px;
+opacity: 0px;
+font-family: Outfit;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+color: #808080;
+
+        }    
+
+        @media only screen and (max-width: 600px) {
+    .contents2 {
+      flex-direction: column;
+    }
+
+    .avatar {
+      text-align: center;
+    }
+
+    .rating {
+      margin-top: 10px;
+    }
+  }
+        .tex1 {
+           font-size: 16px;
+           font-family: Robot;
+           font-weight: 400;
+           Line-height:18.75px;
+           text-align: center;
+           display:inline-block;
+           width:40px;
+           color: aliceblue;
+        }
+        .tex2 {
+           font-size: 16px;
+           font-family: Roboto;
+           font-weight: 400;
+           Line-height:18.75px;
+           text-align: center;
+           display:inline-block;
+           width:32px;
+           height: 19px;
+            color: #5570F1;
+
+        }
+        .container2 {
+            display: flex;
+    justify-content: center; /* Center horizontally */
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin:  0 auto;
+    padding: 0;
+    width: auto;
+
+opacity: 0px;
+
+
+  
+
+        }
+
+        
+        .property-card {
+            flex-basis: calc(33.333% - 20px);
+            margin: 10px;
+            background-color: #f2f2f2;
+            position: relative;
+            height: auto;
+opacity: 0px;
+
+        }
+        .property-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(51, 51, 51, 0.5);
+            color: #fff;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and(max-width: 500px) {
+            .container2{
+                padding: 0 20px;
+
+            }
+  .property-card  img {
+          
+        width: 100%;
+        height: auto; 
+  }
+}
+
+.Amn-content {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax values as needed */
+  gap: 20px; 
+font-family: Roboto;
+font-size: 20px;
+font-weight: 200; 
+}
+.Fa-content{
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax values as needed */
+  gap: 20px; 
+font-family: Roboto;
+font-size: 20px;
+font-weight: 200
+}
+.button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    }
+.button1 {
+color: #5570F1;
+  padding: 10px 20px;
+ background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax values for smaller screens */
+  }
+}
+
+
+     </style>
+</head>
+
+<body>
+   
+    <nav class="navbar breadcrumb " style="background-color: #fff;">
+        <div class="container" style="background-color: #fff;">
+            <div class="logo"><img  src="images/logo2.png" ></div>
+            <ul class="menu">
+                <li><a href="#home" class="nav-header">Home</a></li>
+                <li><a href="#about" class="nav-header">Properties</a></li>
+                <li><a href="#projects" class="nav-header">Blog</a></li>
+                
+                      <li><a href="#contact" class="nav-header">Contact</a></li>
+                      <button  type="button" class="btn btn-primary">list a property</button>
+                      <button type="button" class="btn2 btn-lg btn-primary" disabled>Sign In</button>
+                    </ul>
+            <div class="nav-header ">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        
+         <span class="breadcrumb-item active" style='color:#8B8D97' ;
+          aria-current="page">Home/</span>
+         <span class="breadcrumb-item active"style='color:#8B8D97' ;  aria-current="page">Properties/</span>
+         <span class="breadcrumb-item" style='color:#8B8D97' ;><a href="#">Ain Shams near universities</a></span>
+    </nav> 
+    <section class="home"  id="home">
+            <div class="home-content" style="   display: flex;
+            flex-wrap: wrap;
+            margin: 20px;">
+                <div class="text1 " > 
+                    <span class="menu2" style="    display: flex;
+                    justify-content: space-between; position:relative; " >  
+                    <button type="button" class="btn2 btn-lg btn-primary fa-solid fa-camera" > <span class = "tex1">Media </span></button>
+                    <button type="button" class="btn3 btn-lg btn-primary fa-solid fa-location-pin" > <span class = "tex2">Map </span></button>
+                    <span  class="btn1 btn-lg btn-primary "> <i class="fa-regular fa-heart" style="width: 20px;
+                        height: 18.23px;
+                        top: 3px;"></i></span>     
+                </span>
+                   </div>
+    </div>
+    </section>
+    <div class="container2">
+
+        <div class="property-card ">
+         <img src="images/unsplash_rDH2ND9Ajjo.png" alt="property-image">
+     </div>
+     <div class="property-card">
+         <img src="images/unsplash_uZQGEo9DGe8.png" class='img-fluid'alt="property-image">
+     </div>
+     <div class="property-card">
+         <img src="images/OC3KH20 4.png " alt="property-image">
+         <div class="badge">+4</div>
+     </div>
+     
+</div>
+<div class="container1">
+    <div class="column">
+        <h1>Cairo, Ain Shams near universities</h1>
+        <div class="inner-row">
+        <i class="fas fa-star yellow" style="vertical-align: middle;"></i>
+        <i class="fas fa-star yellow" style="vertical-align: middle;"></i>
+        <i class="fas fa-star yellow" style="vertical-align: middle;"></i>
+        <i class="fas fa-star yellow" style="vertical-align: middle;"></i>
+        <i class="fas fa-star yellow" style="vertical-align: middle;"></i>
+        <p>4 Review</p>
+        <p>Listed By <span class="underline">Ahmed Ali</span></p>
+    </div>
+    <div class="inner-row">
+        <div class="con">
+            <p>Studio</p>
+        </div>
+        <div class="con">
+            <p>Studio</p>
+        </div>
+        <div class="con">
+            <p>Studio</p>
+        </div>
+    </div>
+    <div class="inner-row">
+        <div class="con2">
+            <img src="images/bed.jpeg"/>
+        </div>
+        <h4>4 Beds</h4>
+        <div class="con2">
+
+        <img src="images/bath.jpeg"/>
+        </div>
+        <h4>1 Bathroom</h4>
+        <div class="con2">
+
+        <img src="images/zoom.jpeg">
+        </div>
+        <h4>24 M</h4>
+    </div>
+    </div>
+    <div class="column">
+        <div class="vertical-divider"></div>
+    </div>
+    <div class="column">
+        <div class="buttons-wrapper">
+            <div class="buttons">
+              <h1>$120<span style="font-size: 16px; color: gray;">/month</span></h1>
+              <button>Apply Now</button>
+              <button>Schedule a Tour</button> </div>
+          </div>
+        </div>
+    </div>
+  </div>
+<div class="Aminit" style=" margin-left:30px;" >
+    <div class="Amn-content" style="margin: auto;">
+        <h1 >Aminites</h1>
+        <div class="buttont-row">
+            <button class="button1">Air Conditioning</button>
+               <button class="button1">Electricity</button>
+                 <button class="button1">Balacony</button>
+                  <button class="button1">Heating</button>      
+        </div>
+             <div class="buttont-row">
+            <button class="button1">Heating</button>
+               <button class="button1">Wifi</button>
+                 <button class="button1">Smart Tv</button>
+                  <button class="button1">Kitchen</button>      
+        </div>
+    <div>
+        <button class="button1">Elevator</button>
+  </div>
+    </div>
+</div>
+
+<div class="Facilities" style="margin-left:30px;margin-top:20px ;">
+    <div class="Fa-content" style=" ">
+        <span class="facili" style="display: inline-block; width: 112px;
+        height: 33px;
+        width: 112px;
+height: 33px;
+gap: 0px;
+opacity: 0px;
+font-family: Roboto;
+font-size: 28px;
+font-weight: 500;
+line-height: 32.81px;
+text-align: left;
+
+">Facilities</span>
+      <a href=""  style="font-size: 15px; color: #5570F1;">See on Map</a>
+      <div class="buttont-row">
+        <button class="button1" style="color:black;" ><i class="fa-brands fa-dashcube" style="color: #F8B32E;width: 22px;"></i>Nearby Restaurants</button>
+        <button class="button1" style="color:black;"><i class="fa-solid fa-bus" style="color: #F8B32E;"></i>public Transportation</button>
+    </div>
+ 
+    </div>
+    
+    <ul class="o" style="display: flex; width: Fixed (278px)px;
+    height: Hug (72px)px;
+    padding: 10px 0px 0px 0px;
+    gap: 30px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+    ">
+       
+        <li style="width: 70px;
+        height: 21px;
+        gap: 0px;
+        opacity: 0px;
+        " >Holmes</li>
+        <li>KFC</li>
+<li>Homes</li>
+
+    </ul>
+    <ul class="o" style="display: flex; width: Fixed (278px)px;
+    height: Hug (72px)px;
+    padding: 10px 0px 0px 0px;
+    gap: 30px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+    ">
+       
+        <li >Homes</li>
+        <li>Homes</li>
+<li>Homes</li>
+
+    </ul>
+
+</div>
+<div class="review" style="font-family: 'Robot' ;padding: 10px 5px; width: Hug (1,286px)px;
+height: Hug (501px)px;
+gap: 10px;
+opacity: 0px;
+">
+    <h1 style="font-size: 25px;margin: 20px;">Reviews(120)</h1>
+ 
+    <div class="content" >
+        <div class="contents2 " style="display: flex;">
+            <div class="avatar" >
+                <img src="images/Image.png" alt="User Avatar">
+              </div>
+       <div class="rating">
+        <h2>Kristin Watson</h2>
+        <span class="star" style="color: #F8B32E;" >&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star"style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+      </div>
+    </div>
+      <p>Duis at ullamcorper nulla, eu dictum eros.</p>
+     
+    </div>
+    <hr>
+    <div class="content" >
+        <div class="contents2 " style="display: flex; gap: 8px;">
+            <div class="avatar" >
+                <img src="images/Image.png" alt="User Avatar">
+              </div>
+       <div class="rating">
+        <h2>Kristin Watson</h2>
+        <span class="star" style="color: #F8B32E;" >&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star"style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+      </div>
+    </div>
+      <p>Keep the soil evenly moist for the healthiest growth. If the sun gets too hot, Chinese cabbage tends to "bolt" or go to seed; in long periods of heat, some kind of shade may be helpful. Watch out for snails, as they will harm the plants..</p>
+     
+    </div>
+    <hr>
+    <div class="content" >
+        <div class="contents2 " style="display: flex; gap: 8px;">
+            <div class="avatar" >
+                <img src="images/Image.png" alt="User Avatar">
+              </div>
+       <div class="rating">
+        <h2>Kristin Watson</h2>
+        <span class="star" style="color: #F8B32E;" >&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star"style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+      </div>
+    </div>
+      <p>Vivamus eget euismod magna. Nam sed lacinia nibh, et lacinia lacus.</p>
+     
+    </div>
+    <hr>
+
+    <div class="content" >
+        <div class="contents2 " style="display: flex; gap: 8px;">
+            <div class="avatar" >
+                <img src="images/Image.png" alt="User Avatar">
+              </div>
+       <div class="rating">
+        <h2>Kristin Watson</h2>
+        <span class="star" style="color: #F8B32E;" >&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+        <span class="star"style="color: #F8B32E;">&#9733;</span>
+        <span class="star" style="color: #F8B32E;">&#9733;</span>
+      </div>
+    </div>
+      <p>200+ Canton Pak Choi Bok Choy Chinese Cabbage Seeds Heirloom Non-GMO Productive Brassica rapa VAR. chinensis, a.k.a. Canton's Choice, Bok Choi, from USA</p>
+     
+    </div>
+    <hr>
+    <div class="butt" style="display: flex; justify-content: center;align-items: center;">
+    <button class ='transparent-btn' style="background-color: transparent; border: 2px solid ;padding: 2% 4%;color: #F8B32E;font-size: 1em;cursor: pointer;border-radius: 25px;margin-top: 10px;">See More</button>
+  </div>
+</div>
+    
+
+<div class=" properties" >
+<h1 style="color: #0056b3;">Similiar Properties</h1>
+<div class="simi-content">
+    <div class="card" style="width: 18rem; ">
+        <img src="images/OC3KH20 2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cairo, Ain Shams near universities </h5>
+          <p class="card-text"></p>
+          <button href="#" class="btn2 btn-primary">Check</a>
+        </div>
+      </div>
+  
+</div>
+</div>
+
+    <section class="contact" id="contact">
+        <div class="container" >
+           <img src="images/logo2.png" alt="" class="src">
+        
+            <div class="contact-content">
+                <div class="column left">
+              
+                    <div class="icons">
+                        <div class="row">
+                           
+                            <div class="content">
+                                <div class="" style="font-weight: 800;font-size: 18px;color: #5570F1;width: 25px;">Subscribe</div>
+                                <div class="field email" style="width: 100px;padding: 2% 4%;">
+                                    <input type="email" placeholder="Enter your Email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                    <h1 style="color: #5570F1;">Follow Us</h1>
+                        </div>
+                        <div class="row " style="gap:8px">
+                           
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <div class="content">
+                                
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="column right">
+                
+                    <form action="#">
+                        <div class="footer">
+                            <div class="field name">
+                                <h2 style="color: #5570F1;">About UniDorm</h2>
+                            <p>Contact<br><br>
+                                Want to be A seller ?<br><br>
+                                <br><br>
+                                Properties</p>
+                               
+                            </div>
+                            <div class="field name">
+                                <h2 style="color: #5570F1;">Support</h2>
+                            <p>111 Bijoy sarani,Dhaka,
+                                DH 1515<br><br>
+                                Bangladesh.exclusive@gmail.com<br><br>
+                                 +88015-88888-9999 </p>
+                               
+                            </div>
+                            <div class="field name">
+                                <h2 style="color: #5570F1;">Account</h2>
+                            <p>My Account
+                                Login / Register<br><br>
+                                Wishlist<br><br>
+                                Properties</p>
+                               
+                            </div>
+                         
+                            
+                            
+                        </div>
+                        <div class="field">
+                            
+                        </div>
+                        <div class="field textarea">
+                        </div>
+                        <div class="button-area">
+                          
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>Copyright UniDorm 2023. All right reserved<span class="far fa-copyright"></span></span>
+    </footer>
+
+  
+</body>
+</html>
